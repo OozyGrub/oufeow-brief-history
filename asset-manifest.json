@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/oufeow-brief-history/static/css/main.d1b05096.chunk.css",
+    "main.js": "/oufeow-brief-history/static/js/main.88bcc40f.chunk.js",
+    "main.js.map": "/oufeow-brief-history/static/js/main.88bcc40f.chunk.js.map",
+    "runtime-main.js": "/oufeow-brief-history/static/js/runtime-main.11a8f7fb.js",
+    "runtime-main.js.map": "/oufeow-brief-history/static/js/runtime-main.11a8f7fb.js.map",
+    "static/js/2.379488c9.chunk.js": "/oufeow-brief-history/static/js/2.379488c9.chunk.js",
+    "static/js/2.379488c9.chunk.js.map": "/oufeow-brief-history/static/js/2.379488c9.chunk.js.map",
+    "index.html": "/oufeow-brief-history/index.html",
+    "precache-manifest.72a898a44f9affc254ac2700ce06a1fb.js": "/oufeow-brief-history/precache-manifest.72a898a44f9affc254ac2700ce06a1fb.js",
+    "service-worker.js": "/oufeow-brief-history/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/oufeow-brief-history/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.379488c9.chunk.js.LICENSE.txt": "/oufeow-brief-history/static/js/2.379488c9.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/oufeow-brief-history/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11a8f7fb.js",
+    "static/js/2.379488c9.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.88bcc40f.chunk.js"
+  ]
+}
