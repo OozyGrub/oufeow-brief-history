@@ -54,6 +54,25 @@
   width: 18vmin;
 }
 
+.nav-bar {
+  display: flex;
+  align-items: space-between;
+  justify-content: space-between;
+  background-color: black;
+  padding: 20px;
+  margin: 0px;
+}
+
+.nav-item {
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+
 .pb-0{
   padding-bottom: 0vh;
 }
