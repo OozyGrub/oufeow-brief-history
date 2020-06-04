@@ -18,6 +18,11 @@ function App() {
         >
           My Resume
         </a>
+        <div>
+          <a>Feature 1</a>
+          <a>Feature 2</a>
+          <a>Feature 3</a>
+        </div>
       </header>
     </div>
   );
