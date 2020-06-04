@@ -1,30 +1,22 @@
 import React from 'react';
-import photo from './myphoto.jpg';
 import './App.css';
+
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import HomePage from "./HomePage";
+import GalleryPage from "./GalleryPage";
+import NavBar from "./NavBar";
+import StoryPage from "./StoryPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className = "image-cropper">
-          <img src={photo} className="App-logo" alt="logo"/>
-        </div>
-        <p className="pb-2 mb-0">
-          KRIT KRUAYKITANON
-        </p>
-        <a
-          className="App-link"
-          href="https://drive.google.com/file/d/1LjPYSx9O7_CSkMIyv2lNphNxdTAmpSag/view?usp=sharing"
-        >
-          My Resume
-        </a>
-        <div>
-          <a>Feature 1</a>
-          <a>Feature 2</a>
-          <a>Feature 3</a>
-        </div>
-      </header>
-    </div>
+    <Router>
+      <NavBar />
+      <Switch>
+        <Route exact path="/"><HomePage /></Route>
+        <Route exact path="/gallery"><GalleryPage /></Route>
+        <Route exact path="/story"><StoryPage /></Route>
+      </Switch>
+    </Router>
   );
 }
 
