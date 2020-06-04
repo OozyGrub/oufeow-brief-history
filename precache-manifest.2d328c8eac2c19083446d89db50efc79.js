@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "25b3653464ceaed0f2baf281242ab9ea",
+    "revision": "e3ef9453da74cfade7e439f6f7d2f6f8",
     "url": "/oufeow-brief-history/index.html"
   },
   {
-    "revision": "2042091454c76396792e",
+    "revision": "34fabe69674e46f33015",
     "url": "/oufeow-brief-history/static/css/main.666809cb.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/oufeow-brief-history/static/js/2.379488c9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "2042091454c76396792e",
-    "url": "/oufeow-brief-history/static/js/main.5f688779.chunk.js"
+    "revision": "34fabe69674e46f33015",
+    "url": "/oufeow-brief-history/static/js/main.04d4e78f.chunk.js"
   },
   {
     "revision": "58e8233ee485d6b344bf",
