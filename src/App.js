@@ -1,22 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import photo from './myphoto.jpg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+        <div className = "image-cropper">
+          <img src={photo} className="App-logo" alt="logo"/>
+        </div>
+        <p className="pb-2 mb-0">
+          KRIT KRUAYKITANON
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://drive.google.com/file/d/1LjPYSx9O7_CSkMIyv2lNphNxdTAmpSag/view?usp=sharing"
         >
-          Learn React
+          My Resume
         </a>
       </header>
     </div>
