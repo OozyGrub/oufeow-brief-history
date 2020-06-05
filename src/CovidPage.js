@@ -29,42 +29,31 @@ function CovidPage() {
         <h4>
           Thai Covid Status
         </h4>
-        <CovidCard
-          covidTitle="Confirmed"
-          covidData={covidData.Confirmed}
-          isLoading={isLoading}
-          handleChange={()=>{
-            setCovidData({...covidData, Confirmed: covidData.Confirmed+1})
-          }}
-        />
-
-        <CovidCard
-          covidTitle="Hospitalized"
-          covidData={covidData.Hospitalized}
-          isLoading={isLoading}
-          handleChange={()=>{
-            setCovidData({...covidData, Hospitalized: covidData.Hospitalized+1})
-          }}
-        />
-
-        <CovidCard
-          covidTitle="Recovered"
-          covidData={covidData.Recovered}
-          isLoading={isLoading}
-          handleChange={()=>{
-            setCovidData({...covidData, Recovered: covidData.Recovered+1})
-          }}
-        />  
-
-        <CovidCard
-          covidTitle="Deaths"
-          covidData={covidData.Deaths}
-          isLoading={isLoading}
-          handleChange={()=>{
-            setCovidData({...covidData, Deaths: covidData.Deaths+1})
-          }}
-        />
-        
+        {/* { Object fetch from API (mapping only array)
+          Object.keys(covidData).map((keyName, i) => 
+            <div>
+              {keyName}:{covidData[keyName]}
+            </div>)
+        } */}
+        {
+          Object.keys(covidData).map((keyName, i) => 
+            <CovidCard
+              isHide
+              key={keyName}
+              covidTitle={keyName}
+              covidData={covidData[keyName]}
+              isLoading={isLoading}
+              handleChange={
+                () => {
+                  covidData[keyName] += 1; 
+                  setCovidData({...covidData })
+                }
+              }
+              >
+              {keyName} : {covidData[keyName]}
+            </CovidCard>
+          )
+        }
       </React.Fragment>
       
     );
