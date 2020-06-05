@@ -32,8 +32,8 @@ function CovidCard(props) {
         )
       }
       </React.Fragment>
-      
     );
-}
+};
 
+const CovidCard = withCountState(CovidCardNeedingCountState);
 export default CovidCard;
