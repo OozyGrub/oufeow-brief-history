@@ -24,6 +24,11 @@ const Number = styled.p`
   margin: 0px;
   font-size: 64px;
 `;
+const Button = styled.button`
+  border: none;
+  border-radius: 5px;
+  padding: 12px 20px;
+`;
 
 const CovidCardNeedingCountState = (props) => {
     return (
@@ -33,9 +38,9 @@ const CovidCardNeedingCountState = (props) => {
           <Card color="0" count={props.count}>
             <Title>{props.covidTitle}</Title>
             <Number>{props.covidData}</Number>
-            <button onClick={props.handleChange}>
+            <Button onClick={props.handleChange}>
               Add {props.covidTitle}
-            </button>
+            </Button>
           </Card>
         ) : (
           <div style={{color: "red"}}>
