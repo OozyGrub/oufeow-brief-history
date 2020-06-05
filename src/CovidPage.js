@@ -20,7 +20,7 @@ function CovidPage() {
     );
     setIsLoading(false);
     document.title = `There are ${covidData.Confirmed} confirmed patients.`
-  }, []);
+  },[]);
 
   console.log(covidData);
 
