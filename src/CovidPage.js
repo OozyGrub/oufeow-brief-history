@@ -1,54 +1,70 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Color = ["black","purple"];
-const Card = styled.div`
-  background: ${props => Color[props.color]};
-  color: white;
-  border-radius: 7px;
-  padding: 20px;
-  margin: 10px;
-  font-size: 16px;
+import CovidCard from './CovidCard';
 
-`;
+
 function CovidPage() {
-  // implement hook
-  const [confirmedCount, setConfirmedCount] = useState(0);
+  const [covidData, setCovidData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
+  // const [error, setError] = useState(false);
 
   useEffect(() => {
-    // console.log(count);
     const responseData = fetch("https://covid19.th-stat.com/api/open/today")
     .then(response => {
         response.json().then(data => {
-          console.log(data)
-          setConfirmedCount(data.Confirmed)
+          setCovidData(data);
         })
       }
     );
     setIsLoading(false);
-    document.title = `There are ${confirmedCount} confirmed patients.`
+    document.title = `There are ${covidData.Confirmed} confirmed patients.`
   }, []);
+
+  console.log(covidData);
 
     return (
       <React.Fragment>
-      {
-        !isLoading ? (
-          <Card color="0">
-            <p>Covid Report</p>
-            <p>{confirmedCount}</p>
-            <button onClick={() => setConfirmedCount(confirmedCount + 1)}>
-              Add
-            </button>
-          </Card>
-        ) : (
-          <div style={{color: "red"}}>
-            <p>Loading...</p>
-          </div>
-        )
-      }
+        <h4>
+          Thai Covid Status
+        </h4>
+        <CovidCard
+          covidTitle="Confirmed"
+          covidData={covidData.Confirmed}
+          isLoading={isLoading}
+          handleChange={()=>{
+            setCovidData({...covidData, Confirmed: covidData.Confirmed+1})
+          }}
+        />
+
+        <CovidCard
+          covidTitle="Hospitalized"
+          covidData={covidData.Hospitalized}
+          isLoading={isLoading}
+          handleChange={()=>{
+            setCovidData({...covidData, Hospitalized: covidData.Hospitalized+1})
+          }}
+        />
+
+        <CovidCard
+          covidTitle="Recovered"
+          covidData={covidData.Recovered}
+          isLoading={isLoading}
+          handleChange={()=>{
+            setCovidData({...covidData, Recovered: covidData.Recovered+1})
+          }}
+        />  
+
+        <CovidCard
+          covidTitle="Deaths"
+          covidData={covidData.Deaths}
+          isLoading={isLoading}
+          handleChange={()=>{
+            setCovidData({...covidData, Deaths: covidData.Deaths+1})
+          }}
+        />
+        
       </React.Fragment>
       
     );
