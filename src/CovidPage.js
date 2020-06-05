@@ -4,6 +4,11 @@ import styled from 'styled-components';
 
 import CovidCard from './CovidCard';
 
+const Header = styled.h1`
+  margin-left: 20%;
+  margin-top: 5%;
+  font-weight: lighter;
+`;
 
 function CovidPage() {
   const [covidData, setCovidData] = useState({});
@@ -26,9 +31,9 @@ function CovidPage() {
 
     return (
       <React.Fragment>
-        <h4>
+        <Header>
           Thai Covid Status
-        </h4>
+        </Header>
         {/* { Object fetch from API (mapping only array)
           Object.keys(covidData).map((keyName, i) => 
             <div>
