@@ -4,14 +4,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="header">
-      <div>
-      </div>
-      <ul className="nav-bar">
-        <li><Link className="nav-item" to="/">Home</Link></li>
-        <li><Link className="nav-item" to="/gallery">Gallery</Link></li>
-        <li><Link className="nav-item" to="/story">Story</Link></li>
-      </ul>
+    <div className="nav-bar">
+      <Link className="nav-item" to="/">Home</Link>
+      <Link className="nav-item" to="/gallery">Gallery</Link>
+      <Link className="nav-item" to="/story">Story</Link>
+      <Link className="nav-item" to="/covid">Covid</Link>
     </div>
   );
 }
