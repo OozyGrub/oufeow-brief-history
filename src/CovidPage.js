@@ -36,7 +36,9 @@ function CovidPage() {
             </div>)
         } */}
         {
-          Object.keys(covidData).map((keyName, i) => 
+          Object.keys(covidData).filter((keyName) =>
+            covidData[keyName] % parseInt(covidData[keyName]) === 0
+          ).sort((a,b) => covidData[b]-covidData[a]).map((keyName, i) => 
             <CovidCard
               isHide
               key={keyName}
