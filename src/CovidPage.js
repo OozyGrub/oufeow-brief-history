@@ -1,13 +1,16 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, Children} from 'react';
 import './App.css';
 import styled from 'styled-components';
 
 import CovidCard from './CovidCard';
-
+import TimerComponent from './TimerComponent';
 const Header = styled.h1`
-  margin-left: 20%;
-  margin-top: 5%;
+  margin: 0px;
   font-weight: lighter;
+`;
+
+const Canvas = styled.div`
+  background-color: #E7FFAC;
 `;
 
 function CovidPage() {
@@ -30,7 +33,8 @@ function CovidPage() {
   console.log(covidData);
 
     return (
-      <React.Fragment>
+      <Canvas>
+        <TimerComponent isHide />
         <Header>
           Thai Covid Status
         </Header>
@@ -61,7 +65,7 @@ function CovidPage() {
             </CovidCard>
           )
         }
-      </React.Fragment>
+      </Canvas>
       
     );
 }
