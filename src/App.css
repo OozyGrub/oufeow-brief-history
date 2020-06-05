@@ -54,6 +54,27 @@
   width: 18vmin;
 }
 
+.nav-bar {
+  display: flex;
+  align-items: space-between;
+  justify-content: flex-end;
+  background-color: black;
+  padding: 20px;
+}
+
+.nav-item {
+  color: white;
+  text-decoration: white;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+}
+
 .pb-0{
   padding-bottom: 0vh;
 }
