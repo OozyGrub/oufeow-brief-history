@@ -1,28 +1,40 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
 import styled from 'styled-components'
+import withCountState from './withCountState';
 
-const Color = ["black","purple"];
+const Color = ["yellow","grey"];
+const BackgroundColor = ["black"]
+
 const Card = styled.div`
-  background: ${props => Color[props.color]};
-  color: white;
+  background: ${props => BackgroundColor[props.color]};
+  color: ${props => Color[props.count % 2]};
   border-radius: 7px;
   padding: 20px;
   margin: 10px;
   font-size: 16px;
+  width: 50%;
 
 `;
 
-function CovidCard(props) {
+const Title = styled.p`
+  margin: 0px;
+`;
+const Number = styled.p`
+  margin: 0px;
+  font-size: 64px;
+`;
+
+const CovidCardNeedingCountState = (props) => {
     return (
       <React.Fragment>
       {
         !props.isLoading ? (
-          <Card color="0">
-            <p>{props.covidTitle}</p>
-            <p>{props.covidData}</p>
+          <Card color="0" count={props.count}>
+            <Title>{props.covidTitle}</Title>
+            <Number>{props.covidData}</Number>
             <button onClick={props.handleChange}>
-              Add
+              Add {props.covidTitle}
             </button>
           </Card>
         ) : (
